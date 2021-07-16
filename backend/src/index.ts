@@ -1,6 +1,7 @@
 import express from 'express';
 import config from './config/config';
 import mongoose from 'mongoose';
+import { formRoute } from './controllers/routes';
 
 const main = async () => {
 	mongoose.connect(config.dburl, {
@@ -8,6 +9,8 @@ const main = async () => {
 		useUnifiedTopology: true,
 	});
 	const app = express();
+	app.use(formRoute);
+
 	const port = config.port;
 
 	app.listen(port, () => {
