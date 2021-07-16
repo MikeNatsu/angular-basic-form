@@ -1,4 +1,9 @@
 <header>
-  <fa-icon [icon]="faBars" size="2x"></fa-icon>
+  <fa-icon
+    (click)="barsOnToggle()"
+    [icon]="faBars"
+    size="2x"
+    class="{{ showSideBar ? 'rotate-sidebar-90' : 'rotate-sidebar-0' }}"
+  ></fa-icon>
   <h1>{{ title }}</h1>
 </header>

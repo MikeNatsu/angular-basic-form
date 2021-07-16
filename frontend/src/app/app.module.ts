@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { CreatePostComponent } from './pages/create-post/create-post.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { MainContentComponent } from './components/main-content/main-content.com
     HeaderComponent,
     FooterComponent,
     MainContentComponent,
+    CreatePostComponent,
+    SidebarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

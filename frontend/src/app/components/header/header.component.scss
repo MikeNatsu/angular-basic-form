@@ -9,3 +9,33 @@ h1 {
   flex-grow: 5;
   text-align: center;
 }
+
+.rotate-sidebar-0{
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+
+}
+
+.rotate-sidebar-90 {
+  -webkit-transform: rotate(90deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+}
+
