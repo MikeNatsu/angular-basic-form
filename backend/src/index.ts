@@ -1,10 +1,17 @@
 import express from 'express';
-
-const app = express();
+import config from './config/config';
+import mongoose from 'mongoose';
 
 const main = async () => {
-	app.listen(5000, () => {
-		console.log(`Server running on: ${5000}`);
+	mongoose.connect(config.dburl, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	});
+	const app = express();
+	const port = config.port;
+
+	app.listen(port, () => {
+		console.log(`Server running on: ${port}`);
 	});
 };
 
