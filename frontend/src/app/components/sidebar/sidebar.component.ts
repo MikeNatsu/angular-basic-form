@@ -15,5 +15,9 @@ export class SidebarComponent implements OnInit {
     });
   }
 
+  linkClicked(): void {
+    this.uiService.toggleBarIcon();
+  }
+
   ngOnInit(): void {}
 }

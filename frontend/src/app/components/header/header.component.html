@@ -1,9 +1,17 @@
 <header>
   <fa-icon
+    *ngIf="hasRoute('/')"
     (click)="barsOnToggle()"
     [icon]="faBars"
     size="2x"
-    class="{{ showSideBar ? 'header-icon rotate-sidebar-90' : 'header-icon rotate-sidebar-0' }}"
+    class="{{
+      showSideBar
+        ? 'header-icon rotate-sidebar-90'
+        : 'header-icon rotate-sidebar-0'
+    }}"
   ></fa-icon>
+  <a routerLink="/">
+    <fa-icon *ngIf="!hasRoute('/')" [icon]="faArrowLeft"></fa-icon>
+  </a>
   <h1>{{ title }}</h1>
 </header>
