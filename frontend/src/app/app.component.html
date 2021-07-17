@@ -1,8 +1,12 @@
 <div class="container">
   <app-header></app-header>
-  <div class="body-content">
-    <app-sidebar [style]="" class="sidebar-content"></app-sidebar>
-    <router-outlet></router-outlet>
+
+  <div
+    class="body-content"
+    class="{{ hasRoute('/create') ? 'create-post' : 'main-posts' }}"
+  >
+    <app-sidebar class="sidebar-content"></app-sidebar>
+    <router-outlet class="router"></router-outlet>
   </div>
-  <app-footer class="footer"></app-footer>
+  <app-footer></app-footer>
 </div>

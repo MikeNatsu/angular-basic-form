@@ -1,17 +1,35 @@
 .body-content {
   display: flex;
-  flex-grow: 7;
+  flex-direction: column;
+  align-self: center;
+  @media only screen and (min-width: 800px) {
+    display: flex;
+    flex-direction: row;
+    justify-self: start;
+    .router{
+      justify-self: center;
+    }
+    flex-grow: 5;
+  }
+  padding: 0;
+  align-self: stretch;
 }
 .container {
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: column;
 }
 
 .main-content {
   flex-grow: 5;
+  align-self: stretch;
 }
 
 .footer {
   background-color: #f1f1f1;
+}
+
+.create-post{
+ align-self: center;
 }

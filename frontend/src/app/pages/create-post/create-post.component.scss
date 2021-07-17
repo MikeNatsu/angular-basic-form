@@ -1,0 +1,57 @@
+.form-container {
+  border: dashed;
+  padding: 1.5rem;
+}
+
+.form-control {
+  margin: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  input {
+    border-radius: 2%;
+    border-style: solid;
+    border-color: black;
+    padding: 5% 1.5%;
+    padding-bottom: 2%;
+    margin-top: 12px;
+    font-size: 16pt;
+  }
+
+  label {
+    padding: 0px 5px;
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+  }
+  textarea {
+    border-radius: 2%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 5% 1.5%;
+    margin-top: 12px;
+    font-size: 16pt;
+    height: 125px;
+    resize: none;
+    overflow: hidden;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 5%;
+  background-color: black;
+  color: #f1f1f1;
+  padding: 8px;
+  cursor: pointer;
+  font-size: medium;
+  margin-left: 6%;
+}
+
+button:hover {
+  background-color: #f1f1f1;
+  color: black;
+  border: solid;
+  font-size: medium;
+  padding: 8px;
+}
