@@ -5,7 +5,7 @@ import { CreatePostComponent } from './pages/create-post/create-post.component';
 
 const routes: Routes = [
   { path: '', component: MainContentComponent },
-  { path: 'create', component: CreatePostComponent },
+  { path: 'create', component: CreatePostComponent }, {path:'**', redirectTo: '/'},
 ];
 
 @NgModule({
