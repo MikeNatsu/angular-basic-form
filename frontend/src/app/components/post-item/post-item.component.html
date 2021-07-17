@@ -1,8 +1,14 @@
-<div>
+<div class="post-content">
+  <div class="user-info">
+    <img
+      class="profile-image"
+      src="assets/img/user.jpg"
+      alt="image"
+      width="40"
+    />
+    <h3 class="user-text">{{ post.firstName + " " + post.lastName }}</h3>
+  </div>
   <div class="textarea-section">
-    <div class="name">
-      {{ post.firstName + " " + post.lastName }}
-    </div>
     {{ post.textarea }}
   </div>
 </div>

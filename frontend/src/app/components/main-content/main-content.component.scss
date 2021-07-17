@@ -1,7 +1,13 @@
 .content {
   margin: 10px;
-  border: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  border-color: black;
+}
+
+.post-content{
+  border-bottom: 3px;
+  
+}
+
+.posts-title {
+  margin-bottom: 15px;
+  text-decoration: underline;
 }
