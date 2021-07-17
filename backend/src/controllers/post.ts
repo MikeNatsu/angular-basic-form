@@ -8,7 +8,6 @@ export const createPost = async (req: Request, res: Response) => {
 			firstName: firstName,
 			lastName: lastName,
 			textarea: textarea,
-			created: new Date(),
 		});
 		newPost.save();
 		res.json(newPost);
@@ -17,7 +16,7 @@ export const createPost = async (req: Request, res: Response) => {
 	}
 };
 
-export const getPosts = async (_ : any , res: Response) => {
+export const getPosts = async (_: any, res: Response) => {
 	try {
 		const posts = await Post.find();
 		if (!posts) {

@@ -1,6 +1,7 @@
 import express from 'express';
 import config from './config/config';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import { formRoute } from './controllers/routes';
 
 const main = async () => {
@@ -9,6 +10,7 @@ const main = async () => {
 		useUnifiedTopology: true,
 	});
 	const app = express();
+	app.use(cors());
 	app.use(formRoute);
 
 	const port = config.port;
