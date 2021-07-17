@@ -10,7 +10,7 @@ h1 {
   text-align: center;
 }
 
-.rotate-sidebar-0{
+.rotate-sidebar-0 {
   -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -21,8 +21,6 @@ h1 {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
-
 }
 
 .rotate-sidebar-90 {
@@ -36,6 +34,8 @@ h1 {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
 }
 
+.header-icon:hover {
+  cursor: pointer;
+}
