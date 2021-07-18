@@ -1,17 +1,27 @@
 <div class="form-container">
-  <form>
+  <form (ngSubmit)="onSubmit()">
     <div class="form-control">
       <label for="firstName">First name</label>
-      <input type="text" name="firstName" id="firstName" />
+      <input
+        [(ngModel)]="firstName"
+        type="text"
+        name="firstName"
+        id="firstName"
+      />
     </div>
     <div class="form-control">
       <label for="">Last name</label>
-      <input type="text" name="lastName" id="lastName" />
+      <input [(ngModel)]="lastName" type="text" name="lastName" id="lastName" />
     </div>
     <div class="form-control">
       <label for="text-area"> Message </label>
-      <textarea class="text-area" name="textarea" id="textarea"></textarea>
+      <textarea
+        [(ngModel)]="textarea"
+        class="text-area"
+        name="textarea"
+        id="textarea"
+      ></textarea>
     </div>
-    <button class="btn" type="submit">Submit</button>
+    <button class="btn" value="Save Post" type="submit">Submit</button>
   </form>
 </div>

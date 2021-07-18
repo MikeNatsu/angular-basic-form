@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-self: start;
-    .router{
+    .router {
       justify-self: center;
     }
     flex-grow: 5;
@@ -30,6 +30,10 @@
   background-color: #f1f1f1;
 }
 
-.create-post{
- align-self: center;
+.sidebar-content {
+  width: 20%;
+}
+
+.create-post {
+  align-self: center;
 }
