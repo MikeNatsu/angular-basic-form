@@ -32,11 +32,10 @@
 
 .sidebar-content {
   width: 20%;
-}
-
-@keyframes sidebar-effect {
-  
-  
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .create-post {
