@@ -10,6 +10,14 @@ export const createPost = async (req: Request, res: Response) => {
 			textarea: textarea,
 		});
 		newPost.save();
+
+		//get 20 lastest documents
+		const lastestPost = await Post.find().sort({ _id: -1 }).limit(15);
+		Post.deleteMany().then(() => {
+			console.log('deleted ');
+		});
+		Post.insertMany(lastestPost);
+
 		res.json(newPost);
 	} catch (error) {
 		console.log(error);
