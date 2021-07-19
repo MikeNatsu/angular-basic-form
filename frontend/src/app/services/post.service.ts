@@ -1,40 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { Post } from '../Post';
-import { map, catchError } from 'rxjs/operators';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-  }),
-};
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
   private apiUrl = 'http://localhost:3000';
-
   constructor(private http: HttpClient) {}
 
-  getPosts(): Observable<Post[]> {
-    const url = `${this.apiUrl}/posts`;
-    return this.http.get<Post[]>(url).pipe(
-      map(
-        (data: Post[]) => {
-          return data;
-        },
-        catchError((error) => {
-          return throwError('Something went wrong!');
-        })
-      )
-    );
+  getPosts() {
+    return this.http.get<Post[]>(`${this.apiUrl}/posts`);
   }
 
   addPost(post: Post): Observable<Post> {
     const url = `${this.apiUrl}/post`;
-    console.log('from request-side : ', post);
-    return this.http.post<Post>(url, post, httpOptions);
+    return this.http.post<Post>(url, post);
   }
 }

@@ -1,5 +1,18 @@
 .sidebar {
   background-color: #f1f1f1;
+  position: absolute;
+  left: -100px;
   padding: 20px;
   height: 100%;
+  width: 160px;
+}
+
+.sidebar-animation {
+  animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+  100% {
+    left: 0;
+  }
 }

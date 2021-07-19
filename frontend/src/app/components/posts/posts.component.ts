@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../Post';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-posts',
@@ -12,8 +13,11 @@ export class PostsComponent implements OnInit {
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe((posts) => {
-      this.posts = posts;
-    });
+    this.postService
+      .getPosts()
+      .pipe(take(1))
+      .subscribe((posts) => {
+        this.posts = posts;
+      });
   }
 }

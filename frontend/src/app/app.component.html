@@ -1,9 +1,8 @@
 <div class="container">
   <app-header></app-header>
-
   <div
+    [ngClass]="[isCreate ? 'create-post' : 'main-posts']"
     class="body-content"
-    class="{{ hasRoute('/create') ? 'create-post' : 'main-posts' }}"
   >
     <app-sidebar class="sidebar-content"></app-sidebar>
     <router-outlet class="router"></router-outlet>

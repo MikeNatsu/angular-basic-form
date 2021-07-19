@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { fromEvent, Subscription } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { Post } from 'src/app/Post';
 import { PostService } from 'src/app/services/post.service';
 
@@ -12,10 +13,8 @@ export class CreatePostComponent implements OnInit {
   firstName: string;
   lastName: string;
   textarea: string;
-  subscription: Subscription;
 
   constructor(private postService: PostService) {}
-
   ngOnInit(): void {}
 
   onSubmit() {
@@ -24,8 +23,8 @@ export class CreatePostComponent implements OnInit {
       lastName: this.lastName,
       textarea: this.textarea,
     };
-    console.log(newPost);
-    this.postService.addPost(newPost).subscribe();
+
+    this.postService.addPost(newPost).pipe(take(1)).subscribe();
 
     this.firstName = '';
     this.lastName = '';
