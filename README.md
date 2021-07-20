@@ -8,7 +8,6 @@
 yarn install
 yarn compile 
 yarn start
-
 ```
 
 ### Client:
@@ -16,7 +15,6 @@ yarn start
 ```
 yarn install 
 yarn start
-
 ```
 Angular CLI ? 
 
