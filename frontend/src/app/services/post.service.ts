@@ -7,7 +7,7 @@ import { Post } from '../Post';
   providedIn: 'root',
 })
 export class PostService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://basic-form-angular.herokuapp.com';
   constructor(private http: HttpClient) {}
 
   getPosts() {
